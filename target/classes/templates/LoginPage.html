@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+     <head>
+          <title>eey.id | Admin Login</title>
+          <meta charset="UTF-8">
+          <!--Bootstrap CDN-->
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+                integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="css/login.css"/>
+     </head>
+     <body>
+          <!--          <div class="container-fluid">
+                         <div class="row">
+                              <div class="col-sm-6 col-md-7 intro-section">
+                                   <div class="brand-wrapper">
+                                        <h1>Eey.ID</h1>
+                                   </div>
+                                   <div class="intro-content-wrapper">
+                                        <h1 class="intro-title">Welcome to admin page !</h1>
+                                        <p class="intro-text">Here you do some products & admin editing for eey.id website</p>
+                                   </div>
+                              </div>
+                              <div class="col-sm-6 col-md-5 form-section">
+                                   <div class="login-wrapper">
+                                        <h2 class="login-title">Sign in</h2>
+                                        <form th:action="@{/login}" method="POST">
+                                             <div th:if="${param.error}" class="alert alert-danger">
+                                                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                                  <strong>Error!</strong> Username or password incorect
+                                             </div>
+                                             <div class="form-group">
+                                                  <label for="email" class="sr-only">Email</label>
+                                                  <input type="email" name="email" id="email" class="form-control" placeholder="Email">
+                                             </div>
+                                             <div class="form-group mb-3">
+                                                  <label for="password" class="sr-only">Password</label>
+                                                  <input type="password" name="password" id="password" class="form-control" placeholder="Password">
+                                             </div>
+                                             <div class="d-flex justify-content-between align-items-center mb-5">
+                                                  <button name="login" id="login" class="btn login-btn" type="submit" value="Login">Login</button>
+                                                  <a href="#!" class="forgot-password-link">Password?</a>
+                                             </div>
+                                        </form>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>-->
+          <div>
+               <form th:action="@{/login}" method="post">
+                    <label>Email</label>
+                    <input type="email" name="email">
+                    <br/>
+                    <label>Password</label>
+                    <input type="password" name="password">
+                    <br/>
+                    <button type="submit" value="login">login</button>
+               </form>
+          </div>
+     </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Eey.Id | Products</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Product</td>
+                <td>Stock</td>
+                <td>Event</td>
+                <td>Type</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="as : ${getProducts}">
+                <td th:text="${as.id}"></td>
+                <td th:text="${as.name}"></td>
+                <td th:text="${as.stock}"></td>
+                <td th:text="${as.event.name}"></td>
+                <td th:text="${as.type.name}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
